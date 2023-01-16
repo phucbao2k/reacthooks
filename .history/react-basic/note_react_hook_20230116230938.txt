@@ -1,5 +1,5 @@
 với 1 object trong JS, ta có thể truyền dữ liệu vào block html qua 2 kiểu:
 <p>Đây là giá trị của element trong object: {objectName.elementName}</p>
-<p>Đây là giá trị của cả object: {JSON.stringify(objectName)}</p>
+<p>Đây là giá trị của cả object: {JSON.str}</p>
 
 target="_blank" trong thẻ <a href="" target="_blank"></a> tức là mở link href trong 1 tab mới
