@@ -1,0 +1,1 @@
+với 1 object trong JS

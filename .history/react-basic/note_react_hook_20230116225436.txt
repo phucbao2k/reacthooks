@@ -1,2 +1,2 @@
 với 1 object trong JS, ta có thể truyền dữ liệu vào block html qua kiểu:
-<p>Đây là giá trị của element trong object: {objectName.elementName}</p>
+<></>{}
