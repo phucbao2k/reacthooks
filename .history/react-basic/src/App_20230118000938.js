@@ -4,7 +4,6 @@ import Nav from './views/Nav';
 const App = ()=> {
   const handleEventClick = (event) => {
     console.log('clicked', event.target.value);
-    //*event.target.value tức là lấy value từ event trong html/reactjs, thường áp dụng cho các thẻ select, input...
   }
   return (
     <div className="App">
@@ -14,8 +13,7 @@ const App = ()=> {
         <p>
         Since 2023...
         </p>
-        <input type="text" value="haha" onClick={(event) => handleEventClick(event)}/>
-        
+        <input type="text" value="input" onClick={(event) => }/>
         <a
           className="App-link"
           href="https://reactjs.org"

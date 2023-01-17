@@ -6,6 +6,5 @@
 
 
 *event trong reactjs khá giống event html, như là onClick, onChange...
+8eve
 
-
-*event.target.value tức là lấy value từ event trong html/reactjs, thường áp dụng cho các thẻ select, input... 
