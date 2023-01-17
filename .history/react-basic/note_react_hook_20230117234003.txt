@@ -5,4 +5,4 @@
 *target="_blank" trong thẻ <a href="" target="_blank"></a> tức là mở link href trong 1 tab mới
 
 
-*event trong reactjs khá giống event html, như là onClick, onChange... 
+*event trong reactjs khá giống event html, như là on 

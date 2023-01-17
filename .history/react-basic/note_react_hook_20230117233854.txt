@@ -2,7 +2,4 @@
 <p>Đây là giá trị của element trong object: {objectName.elementName}</p>
 <p>Đây là giá trị của cả object: {JSON.stringify(objectName)}</p>
 
-*target="_blank" trong thẻ <a href="" target="_blank"></a> tức là mở link href trong 1 tab mới
-
-
-*event trong reactjs khá giống event html, như là onClick, onChange... 
+target="_blank" trong thẻ <a href="" target="_blank"></a> tức là mở link href trong 1 tab mới
