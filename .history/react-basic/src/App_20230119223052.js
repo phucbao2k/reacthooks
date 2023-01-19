@@ -4,17 +4,17 @@ import Nav from './views/Nav';
 import { useState } from 'react';
 const App = () => {
   let [year, setYear] = useState('2023');
-  let [address, setAddress] = useState('');
+  let[address, setAddress] = useState(')
   //đây là state trong react-hooks, phần tử đầu tiên là biến, phần tử thứ 2 là function
   //xử lý biến khi dữ liệu thay đổi
   const handleEventClick = (event) => {
-    setYear(address);
+    setYear('2019');
     //sau khi chạy đến hàm set... trong hooks, react sẽ tự nhận biết và re-render lại giá trị biến
     console.log('clicked', year);
+    //*event.target.value tức là lấy value từ event trong html/reactjs, thường áp dụng cho các thẻ select, input...
   }
   const handleOnChangeInput = (event) => {
-    setAddress(event.target.value);
-    //*event.target.value tức là lấy value từ event trong html/reactjs, thường áp dụng cho các thẻ select, input...
+
   }
   return (
     <div className="App">
@@ -24,8 +24,8 @@ const App = () => {
         <p>
           Since {year}...
         </p>
-        <input type="text" value={address} onChange={(event) => handleOnChangeInput(event)} />
-        <button type="button" onClick={(event) => handleEventClick(event)}>Click here</button>
+        <input type="text" value="haha" onClick={(event) => handleEventClick(event)} />
+
         <a
           className="App-link"
           href="https://reactjs.org"
