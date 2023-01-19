@@ -17,12 +17,7 @@ vì for/for-each() sẽ thay đôi dữ liệu phần tử trong array[] đó
 
 * cần có key khi duyệt qua hàm map là để react biết nó cần re-render ở phần tử nào.VD CODE:
 
- {todos.map(todo =>{
-           
-            return(
-              <li className='todo-child' key={todo.id}>{todo.title}</li>
-            )
-          })}
+
 *REACT-HOOK:
 
 

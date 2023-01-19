@@ -17,9 +17,7 @@ const App = () => {
       alert('Empty input!');
       return;
     };
-    let newTodo = {id: 'abc', title: address}
-    setTodos([...todos, newTodo]);
-    setAddress('');
+    let newTodo
     //sau khi chạy đến hàm set... trong hooks, react sẽ tự nhận biết và re-render lại giá trị biến
     console.log('clicked', year);
   }
@@ -36,15 +34,6 @@ const App = () => {
         <p>
           Since {year}...
         </p>
-        <ul className='todos-container'>
-          {/* cần có key khi duyệt qua hàm map là để react biết nó cần re-render ở phần tử nào */}
-          {todos.map(todo =>{
-            console.log('todo la cai nay:', todo);
-            return(
-              <li className='todo-child' key={todo.id}>{todo.title}</li>
-            )
-          })}
-        </ul>
         <input type="text" value={address} onChange={(event) => handleOnChangeInput(event)} />
         <button type="button" onClick={(event) => handleEventClick(event)}>Click here</button>
         <a
