@@ -8,7 +8,7 @@ const App = () => {
   //xử lý biến khi dữ liệu thay đổi
   const handleEventClick = (event) => {
     setYear('2019');
-    //sau khi chạy đến hàm set... trong hooks, react sẽ tự nhận biết và re-render lại giá trị biến
+    
     console.log('clicked', year);
     //*event.target.value tức là lấy value từ event trong html/reactjs, thường áp dụng cho các thẻ select, input...
   }
