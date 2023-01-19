@@ -12,7 +12,7 @@
 
 
 *khi muốn lặp qua các phần tử trong 1 array[] trong 1 framework front-end, ta nên dùng map() chứ ko dùng for/for-each(),
-vì for/for-each() sẽ phá hủy cấu trúc phần tử trong array[] đó
+vì for/for-each() sẽ phá hủy cấu trúc phần tử trong array đó
 
 
 *REACT-HOOK:
