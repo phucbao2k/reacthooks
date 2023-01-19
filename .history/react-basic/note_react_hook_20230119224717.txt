@@ -28,7 +28,7 @@ const handleEventClick = (event) => {
 
 
  const handleOnChangeInput = (event) => {
-    
+    //sau khi chạy đến hàm set... trong hooks, react sẽ tự nhận biết và re-render lại giá trị biến
     setAddress(event.target.value);
     //*event.target.value tức là lấy value từ event trong html/reactjs, thường áp dụng cho các thẻ select, input...
   }

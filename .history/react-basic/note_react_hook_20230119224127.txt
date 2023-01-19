@@ -12,24 +12,7 @@
 
 
 *REACT-HOOK:
-
-
-*VD CODE:
- let [year, setYear] = useState('2023');
+//sau khi chạy đến hàm set... trong hooks, react sẽ tự nhận biết và re-render lại giá trị biến
  let [address, setAddress] = useState('');
-//đây là state trong react-hooks, phần tử đầu tiên là biến, phần tử thứ 2 là function xử lý biến khi dữ liệu thay đổi
-
-
-const handleEventClick = (event) => {
-    setYear(address);
-    //sau khi chạy đến hàm set... trong hooks, react sẽ tự nhận biết và re-render lại giá trị biến
-   
-  }
-
-
- const handleOnChangeInput = (event) => {
-    
-    setAddress(event.target.value);
-    //*event.target.value tức là lấy value từ event trong html/reactjs, thường áp dụng cho các thẻ select, input...
-  }
-
+  //đây là state trong react-hooks, phần tử đầu tiên là biến, phần tử thứ 2 là function
+  //xử lý biến khi dữ liệu thay đổi

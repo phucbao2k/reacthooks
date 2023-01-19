@@ -28,7 +28,6 @@ const handleEventClick = (event) => {
 
 
  const handleOnChangeInput = (event) => {
-    
     setAddress(event.target.value);
     //*event.target.value tức là lấy value từ event trong html/reactjs, thường áp dụng cho các thẻ select, input...
   }
