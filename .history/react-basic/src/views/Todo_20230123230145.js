@@ -1,6 +1,6 @@
 const Todo = (props) =>{
     const {myData, allTodo} = props;
-    //cách viết khác:
+    //cách viết khác
     return(
         <>
         <div className="title-container">

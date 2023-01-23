@@ -1,15 +1,14 @@
 const Todo = (props) =>{
-    const {myData, allTodo} = props;
-    //cách viết khác:
+    const {todos, allTodo} = props.myData;
     return(
         <>
         <div className="title-container">
-{allTodo}
+{props.allTodo}
         </div>
-            <ul className='myData-container'>
+            <ul className='todos-container'>
                 {/* cần có key khi duyệt qua hàm map là để react biết nó cần re-render ở phần tử nào */}
                 *Using Reusing components
-                {myData.map(todo => {
+                {todos.map(todo => {
                     console.log('todo la cai nay:', todo);
                     return (
                         <li className='todo-child' key={todo.id}>{todo.title}</li>
