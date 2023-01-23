@@ -46,4 +46,4 @@ const handleEventClick = (event) => {
   }
 
 
-*với props, chúng ta chỉ có thể truyền dữ liệu từ cha xuống con, không thể từ con lên cha
+*với props, chúng ta chỉ có thể truyền dữ liệu từ cha xuống con, không thể th
