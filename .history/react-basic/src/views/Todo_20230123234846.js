@@ -1,7 +1,7 @@
 const Todo = (props) =>{
-    const { myData, allTodo, handleEventDelete } = props;
-    const deleteTodo = (id) => {
-        handleEventDelete(id)
+    const {myData, allTodo} = props;
+    const delete = (id) => {
+
     }
     //cách viết khác:
     return(
@@ -15,9 +15,7 @@ const Todo = (props) =>{
                 {myData.map(todo => {
                     console.log('todo la cai nay:', todo);
                     return (
-                        <li className='todo-child' key={todo.id}>{todo.title}
-                        &nbsp; &nbsp; 
-                        <span onClick={() => deleteTodo(todo.id)}>x</span></li>
+                        <li className='todo-child' key={todo.id}>{todo.title}</li>
                     )
                 })}
                 <hr></hr>

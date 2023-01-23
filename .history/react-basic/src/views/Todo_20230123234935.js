@@ -16,8 +16,7 @@ const Todo = (props) =>{
                     console.log('todo la cai nay:', todo);
                     return (
                         <li className='todo-child' key={todo.id}>{todo.title}
-                        &nbsp; &nbsp; 
-                        <span onClick={() => deleteTodo(todo.id)}>x</span></li>
+                        &nbsp;</li>
                     )
                 })}
                 <hr></hr>

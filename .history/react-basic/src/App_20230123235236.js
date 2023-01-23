@@ -31,7 +31,7 @@ const App = () => {
   }
   const handleEventDelete = (id) => {
 let currentTodo = todos;
-currentTodo = currentTodo.filter(item => item.id !== id);
+currentTodo = currentTodo.filter(item => item.id === !id);
 setTodos(currentTodo);
   }
   return (
@@ -49,7 +49,7 @@ setTodos(currentTodo);
        />
        {/* Đây là 1 cách tái sử dụng components */}
         <Todo
-          myData={todos.filter(item => item.type ==='first')}
+          myData={todos.filter(item => item.t ==='first')}
           allTodo={'First Todos'} 
           handleEventDelete={handleEventDelete}/>
 

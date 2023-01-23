@@ -31,7 +31,7 @@ const App = () => {
   }
   const handleEventDelete = (id) => {
 let currentTodo = todos;
-currentTodo = currentTodo.filter(item => item.id !== id);
+currentTodo = currentTodo.filter(item => item.id !=== id);
 setTodos(currentTodo);
   }
   return (
