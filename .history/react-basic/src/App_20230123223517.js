@@ -8,8 +8,8 @@ const App = () => {
   let [address, setAddress] = useState('');
   const [todos, setTodos]= useState([
     {id:'1', title:'Thit kho hot vit', type:'first'},
-{id:'2', title:'banh chung', type:'first'},
-{id:'3', title:'banh tet', type:'second'}
+{id:'2', title:'banh chung', type:'fir'},
+{id:'3', title:'banh tet', type:'first'}
   ]);
   //đây là state trong react-hooks, phần tử đầu tiên là biến, phần tử thứ 2 là function
   //xử lý biến khi dữ liệu thay đổi
@@ -40,11 +40,6 @@ const App = () => {
        <Todo
        myData={todos}
        allTodo={'All Todos'}/>
-       {/* Đây là 1 cách tái sử dụng components */}
-        <Todo
-          myData={todos.filter(item => item.type ==='first')}
-          allTodo={'First Todos'} />
-
         <input type="text" value={address} onChange={(event) => handleOnChangeInput(event)} />
         <button type="button" onClick={(event) => handleEventClick(event)}>Click here</button>
         <a

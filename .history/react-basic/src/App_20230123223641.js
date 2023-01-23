@@ -40,10 +40,9 @@ const App = () => {
        <Todo
        myData={todos}
        allTodo={'All Todos'}/>
-       {/* Đây là 1 cách tái sử dụng components */}
         <Todo
-          myData={todos.filter(item => item.type ==='first')}
-          allTodo={'First Todos'} />
+          myData={todos}
+          allTodo={'All Todos'} />
 
         <input type="text" value={address} onChange={(event) => handleOnChangeInput(event)} />
         <button type="button" onClick={(event) => handleEventClick(event)}>Click here</button>
