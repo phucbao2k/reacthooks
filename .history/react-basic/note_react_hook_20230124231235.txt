@@ -51,17 +51,3 @@ const handleEventClick = (event) => {
 
 
 *USEEFFECT:
-
-
-  // tương đương componentDidMount 
-  useEffect(() => {
-    console.log('using useEffect react hook');
-  }, []);
-
-  //tương đương componentDidUpdate + componentDidMount, với address trong array là điều kiện check tương tự
-  // if (this.props.address !== prevProps.address) {
-
-//}
-  useEffect(() => {
-    console.log('using useEffect react hook');
-  }, [address]);

@@ -52,7 +52,6 @@ const handleEventClick = (event) => {
 
 *USEEFFECT:
 
-
   // tương đương componentDidMount 
   useEffect(() => {
     console.log('using useEffect react hook');
