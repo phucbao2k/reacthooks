@@ -8,10 +8,10 @@ const Covid = ()=> {
             let res = await axios.get('https://api.apify.com/v2/key-value-stores/EaCBL1JNntjR3EakU/records/LATEST?disableRedirect=true');
             console.log('data covid: ',res )
             let data = res && res.data ? res.data : [];
-           
+            console.log('check ')
             if (data && data.length > 0) {
                 data.map(item => {
-                    item.date = moment(item.date).format('DD/MM/YYYY');
+                    item.data.date = moment(item.data.date).format('DD/MM/YYYY');
                     return item;
                 })
             }

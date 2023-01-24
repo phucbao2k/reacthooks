@@ -6,9 +6,8 @@ const Covid = ()=> {
     useEffect(() => {
         async function fetchData() {
             let res = await axios.get('https://api.apify.com/v2/key-value-stores/EaCBL1JNntjR3EakU/records/LATEST?disableRedirect=true');
-            console.log('data covid: ',res )
+            console.log
             let data = res && res.data ? res.data : [];
-           
             if (data && data.length > 0) {
                 data.map(item => {
                     item.date = moment(item.date).format('DD/MM/YYYY');
@@ -38,7 +37,7 @@ return (
                 {dataCovid && dataCovid.length> 0 && dataCovid.map(item => {
                     return (
                         <tr >
-                            <td>{item.data.date}</td>
+                            <td>{item.date}</td>
                             <td>{item.Confirmed}</td>
                             <td>{item.Active}</td>
                             <td>{item.death}</td>

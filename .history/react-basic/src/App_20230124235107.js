@@ -57,7 +57,7 @@ setTodos(currentTodo);
         <p>
           Since {year}...
         </p>
-     <Covid/>
+     <
        <Todo
        myData={todos}
        allTodo={'All Todos'}

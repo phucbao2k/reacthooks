@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Nav from './views/Nav';
 import Todo from './views/Todo';
-import Covid from './views/Covid';
+import 
 import { useState, useEffect } from 'react';
 const App = () => {
   let [year] = useState('2023');
@@ -57,7 +57,7 @@ setTodos(currentTodo);
         <p>
           Since {year}...
         </p>
-     <Covid/>
+     
        <Todo
        myData={todos}
        allTodo={'All Todos'}

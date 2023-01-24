@@ -1,0 +1,4 @@
+const Covid = ()=> {
+
+}
+export de

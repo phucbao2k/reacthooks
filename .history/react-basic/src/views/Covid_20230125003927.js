@@ -3,23 +3,17 @@ import axios from "axios";
 import moment from "moment";
 const Covid = ()=> {
     const [dataCovid, setDataCovid] = useState([]);
-    useEffect(() => {
-        async function fetchData() {
-            let res = await axios.get('https://api.apify.com/v2/key-value-stores/EaCBL1JNntjR3EakU/records/LATEST?disableRedirect=true');
-            console.log('data covid: ',res )
-            let data = res && res.data ? res.data : [];
-           
-            if (data && data.length > 0) {
-                data.map(item => {
-                    item.date = moment(item.date).format('DD/MM/YYYY');
-                    return item;
-                })
-            }
-            
-            setDataCovid(data)
+    useEffect(async () => {
+        async 
+        let res = await axios.get('https://api.apify.com/v2/key-value-stores/EaCBL1JNntjR3EakU/records/LATEST?disableRedirect=true');
+        let data = res && res.data ? res.data : [];
+        if(data && data.length> 0){
+            data.map(item => {
+                item.Date = moment(item.Date).format('DD/MM/YYYY');
+                return item;
+            })
         }
-        fetchData();
-
+        setDataCovid(data)
     }, []);
 return (
     <>
@@ -37,11 +31,11 @@ return (
             <tbody>
                 {dataCovid && dataCovid.length> 0 && dataCovid.map(item => {
                     return (
-                        <tr >
-                            <td>{item.data.date}</td>
+                        <tr key = {item.ID}>
+                            <td>{item.Date}</td>
                             <td>{item.Confirmed}</td>
                             <td>{item.Active}</td>
-                            <td>{item.death}</td>
+                            <td>{item.Deaths}</td>
                             <td>{item.Recovered}</td>
                         </tr>
                     )
