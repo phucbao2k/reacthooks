@@ -37,11 +37,11 @@ return (
             <tbody>
                 {dataCovid && dataCovid.length> 0 && dataCovid.map(item => {
                     return (
-                        <tr key={item.ID}>
-                            <td>{item.Date}</td>
+                        <tr key>
+                            <td>{item.data.date}</td>
                             <td>{item.Confirmed}</td>
                             <td>{item.Active}</td>
-                            <td>{item.Deaths}</td>
+                            <td>{item.death}</td>
                             <td>{item.Recovered}</td>
                         </tr>
                     )

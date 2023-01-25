@@ -5,7 +5,7 @@ const Covid = ()=> {
     const [dataCovid, setDataCovid] = useState([]);
     useEffect(() => {
         async function fetchData() {
-            let res = await axios.get('https://api.covid19api.com/country/vietnam?from=2021-10-01T00%3A00%3A00Z&to=2021-10-20T00%3A00%3A00Z');
+            let res = await axios.get('https://api.apify.com/v2/key-value-stores/EaCBL1JNntjR3EakU/records/LATEST?disableRedirect=true');
             console.log('data covid: ',res )
             let data = res && res.data ? res.data : [];
            
@@ -37,11 +37,11 @@ return (
             <tbody>
                 {dataCovid && dataCovid.length> 0 && dataCovid.map(item => {
                     return (
-                        <tr key={item.ID}>
-                            <td>{item.Date}</td>
+                        <tr >
+                            <td>{item.data.date}</td>
                             <td>{item.Confirmed}</td>
                             <td>{item.Active}</td>
-                            <td>{item.Deaths}</td>
+                            <td>{item.death}</td>
                             <td>{item.Recovered}</td>
                         </tr>
                     )
