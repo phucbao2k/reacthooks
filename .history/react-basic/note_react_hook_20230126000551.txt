@@ -67,7 +67,7 @@ const handleEventClick = (event) => {
   }, [address]);
 
 
-  khi làm việc với api ở hook hoặc class, ta nên làm với async/await, và ném vào trong khối lệnh try/catch. sau đó chỉ cần đặt tên 1 biến
+  khi làm việc với api, ta nên làm với async/await và ném vào trong khối lệnh try/catch chỉ cần đặt tên 1 biến
   đại diện cho các giá trị trả về của api, (vd: res, result,...),
   và muốn lấy cụ thể data ở phần nào chỉ 
   cần thêm tiền tố . vào trước mục đó, vd: res.data, res.header, res.config...

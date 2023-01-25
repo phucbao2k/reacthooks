@@ -4,7 +4,7 @@ import moment from "moment";
 //moment là package định dạng ngày tháng và chuyển đổi thời gian
 const Covid = ()=> {
     const [dataCovid, setDataCovid] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
     const [isError, setIsError] = useState(false);
     useEffect(() => {
         try{
@@ -21,21 +21,17 @@ const Covid = ()=> {
                 }
 
                 setDataCovid(data);
-                setIsLoading(false);
-                setIsError(false);
+                setLoading(false);
             })
         }catch(e){
-setIsError(true);
-setIsLoading(false);
+
         }
        
         
         setTimeout(3000);
 
     }, []);
-    console.log('check error', isError);
 return (
-   
     <>
     <h3>Covid 19 tracking</h3>
         <table>
@@ -49,7 +45,7 @@ return (
                 </tr>
             </thead>
             <tbody>
-                {isError ===false && isLoading ===false && dataCovid && dataCovid.length> 0 && dataCovid.map(item => {
+                {loading ===false && dataCovid && dataCovid.length> 0 && dataCovid.map(item => {
                     return (
                         <tr key={item.ID}>
                             <td>{item.Date}</td>
@@ -62,18 +58,11 @@ return (
                 })
                 }
                 {
-                    isError === true &&
-                    <tr>
-                        Something wrong...
-                    </tr>
-                } 
-                {
-                    isLoading === true&&
+                    loading === true&&
                     <tr>
                         LOading...
                     </tr>
                 } 
-               
 
             </tbody>
            

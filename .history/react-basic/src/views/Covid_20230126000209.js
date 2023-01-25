@@ -9,7 +9,7 @@ const Covid = ()=> {
     useEffect(() => {
         try{
             setTimeout(async () => {
-                let res = await axios.get('https://api.covid19api.com/country/vietnam?from=2021-10-01T00%3A00%3A00Z&to=2021-10-20T00%3A00%3A00Z');
+                let res = await axios.get('https://api.covid19api.com/country/vietnamz?from=2021-10-01T00%3A00%3A00Z&to=2021-10-20T00%3A00%3A00Z');
                 console.log('data covid: ', res)
                 let data = res && res.data ? res.data : [];
 

@@ -21,12 +21,12 @@ const Covid = ()=> {
                 }
 
                 setDataCovid(data);
-                setIsLoading(false);
+                setLoading(false);
                 setIsError(false);
             })
         }catch(e){
 setIsError(true);
-setIsLoading(false);
+setLoading(false);
         }
        
         
@@ -49,7 +49,7 @@ return (
                 </tr>
             </thead>
             <tbody>
-                {isError ===false && isLoading ===false && dataCovid && dataCovid.length> 0 && dataCovid.map(item => {
+                {isError ===false && loading ===false && dataCovid && dataCovid.length> 0 && dataCovid.map(item => {
                     return (
                         <tr key={item.ID}>
                             <td>{item.Date}</td>
@@ -68,7 +68,7 @@ return (
                     </tr>
                 } 
                 {
-                    isLoading === true&&
+                    loading === true&&
                     <tr>
                         LOading...
                     </tr>

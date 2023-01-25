@@ -4,38 +4,34 @@ import moment from "moment";
 //moment là package định dạng ngày tháng và chuyển đổi thời gian
 const Covid = ()=> {
     const [dataCovid, setDataCovid] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
     const [isError, setIsError] = useState(false);
     useEffect(() => {
         try{
-            setTimeout(async () => {
-                let res = await axios.get('https://api.covid19api.com/country/vietnam?from=2021-10-01T00%3A00%3A00Z&to=2021-10-20T00%3A00%3A00Z');
-                console.log('data covid: ', res)
-                let data = res && res.data ? res.data : [];
 
-                if (data && data.length > 0) {
-                    data.map(item => {
-                        item.Date = moment(item.Date).format('DD/MM/YYYY');
-                        return item;
-                    })
-                }
-
-                setDataCovid(data);
-                setIsLoading(false);
-                setIsError(false);
-            })
         }catch(e){
-setIsError(true);
-setIsLoading(false);
+            
         }
-       
+        setTimeout(async() =>  {
+            let res = await axios.get('https://api.covid19api.com/country/vietnam?from=2021-10-01T00%3A00%3A00Z&to=2021-10-20T00%3A00%3A00Z');
+            console.log('data covid: ', res)
+            let data = res && res.data ? res.data : [];
+
+            if (data && data.length > 0) {
+                data.map(item => {
+                    item.Date = moment(item.Date).format('DD/MM/YYYY');
+                    return item;
+                })
+            }
+
+            setDataCovid(data);
+            setLoading(false);
+        })
         
         setTimeout(3000);
 
     }, []);
-    console.log('check error', isError);
 return (
-   
     <>
     <h3>Covid 19 tracking</h3>
         <table>
@@ -49,7 +45,7 @@ return (
                 </tr>
             </thead>
             <tbody>
-                {isError ===false && isLoading ===false && dataCovid && dataCovid.length> 0 && dataCovid.map(item => {
+                {loading ===false && dataCovid && dataCovid.length> 0 && dataCovid.map(item => {
                     return (
                         <tr key={item.ID}>
                             <td>{item.Date}</td>
@@ -62,18 +58,11 @@ return (
                 })
                 }
                 {
-                    isError === true &&
-                    <tr>
-                        Something wrong...
-                    </tr>
-                } 
-                {
-                    isLoading === true&&
+                    loading === true&&
                     <tr>
                         LOading...
                     </tr>
                 } 
-               
 
             </tbody>
            
