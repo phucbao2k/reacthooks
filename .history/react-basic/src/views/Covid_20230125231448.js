@@ -39,7 +39,7 @@ return (
                 </tr>
             </thead>
             <tbody>
-                {loading ===false && dataCovid && dataCovid.length> 0 && dataCovid.map(item => {
+                {loading ===falsedataCovid && dataCovid.length> 0 && dataCovid.map(item => {
                     return (
                         <tr key={item.ID}>
                             <td>{item.Date}</td>
@@ -49,15 +49,7 @@ return (
                             <td>{item.Recovered}</td>
                         </tr>
                     )
-                })
-                }
-                {
-                    loading === true&&
-                    <tr>
-                        LOading...
-                    </tr>
-                } 
-
+                })}
             </tbody>
            
            

@@ -49,15 +49,7 @@ return (
                             <td>{item.Recovered}</td>
                         </tr>
                     )
-                })
-                }
-                {
-                    loading === true&&
-                    <tr>
-                        LOading...
-                    </tr>
-                } 
-
+                })}
             </tbody>
            
            

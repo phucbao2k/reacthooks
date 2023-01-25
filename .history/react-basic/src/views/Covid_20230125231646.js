@@ -54,7 +54,7 @@ return (
                 {
                     loading === true&&
                     <tr>
-                        LOading...
+                        LOadin
                     </tr>
                 } 
 

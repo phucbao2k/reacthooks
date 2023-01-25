@@ -52,10 +52,7 @@ return (
                 })
                 }
                 {
-                    loading === true&&
-                    <tr>
-                        LOading...
-                    </tr>
+                    
                 } 
 
             </tbody>
